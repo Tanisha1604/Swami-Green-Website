@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swami Green - Solar Energy Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    .hero-btn {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 32px rgba(40,167,69,0.13), 0 0px 0px #28a745;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.2s;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      padding-top: 0.9rem !important;
+      padding-bottom: 0.9rem !important;
+    }
+    .hero-btn .fa-cogs, .hero-btn .fa-calculator {
+      font-size: 1.35em;
+      vertical-align: middle;
+    }
+    .hero-btn:hover {
+      box-shadow: 0 16px 40px rgba(40,167,69,0.18), 0 0 16px 2px #43e97b66;
+      transform: translateY(-2px) scale(1.04);
+      color: #fff !important;
+    }
+    .btn-outline-light.hero-btn {
+      background: #fff;
+      color: #28a745;
+      border: 2.5px solid #28a745;
+      box-shadow: 0 8px 32px rgba(40,167,69,0.10);
+    }
+    .btn-outline-light.hero-btn:hover {
+      background: linear-gradient(90deg, #e6f4ea 0%, #c6f7e2 100%);
+      color: #28a745 !important;
+      border-color: #28a745;
+      box-shadow: 0 16px 40px rgba(40,167,69,0.18), 0 0 16px 2px #43e97b33;
+    }
+    .btn-success.hero-btn {
+      background: linear-gradient(90deg, #28a745 0%, #43e97b 100%) !important;
+      border: none;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(40,167,69,0.18), 0 0 24px 4px #43e97b55;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-success.hero-btn:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 110%;
+      height: 110%;
+      background: radial-gradient(circle, #43e97b44 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      opacity: 0.7;
+      border-radius: 50px;
+      pointer-events: none;
+    }
+    .btn-success.hero-btn:hover {
+      background: linear-gradient(90deg, #155d27 0%, #43e97b 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 20px 48px rgba(40,167,69,0.22), 0 0 32px 6px #43e97b77;
+    }
+    .hero-btn-group {
+      justify-content: flex-start !important;
+    }
+    @media (max-width: 768px) {
+      .hero-btn-group {
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+      }
+      .hero-btn {
+        width: 100%;
+        min-width: 0;
+        margin-bottom: 0.2rem;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Swami Green Logo" height="40" class="d-inline-block align-top me-2">
+      <span class="fw-bold text-success">Swami Green</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+
+
+<header class="hero">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-down" data-aos-delay="100">Powering a Sustainable Future</h1>
+        <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="200">Innovative solar energy solutions for commercial and industrial applications across India</p>
+        <div class="d-flex flex-wrap gap-3 hero-btn-group mt-4" data-aos="zoom-in" data-aos-delay="350">
+          <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2">
+            <i class="fas fa-cogs"></i> Our Services
+          </a>
+          <a href="calculator.html" class="btn btn-success btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2">
+            <i class="fas fa-calculator"></i> Calculator
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-success mb-3">Our Services</h2>
+      <div class="animated-underline"></div>
+      <p class="lead text-muted mt-4">Powering your sustainable future with comprehensive solar solutions</p>
+    </div>
+
+    <div id="serviceCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <!-- Indicators will be added dynamically -->
+      </div>
+      <div class="carousel-inner rounded-4 shadow-lg">
+        <!-- Carousel items will be added dynamically -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- Service Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 900,
+  once: true,
+  offset: 60,
+  easing: 'ease-in-out',
+});
+
+// Highlight active nav link based on current page
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const path = window.location.pathname.split('/').pop();
+navLinks.forEach(link => {
+  const href = link.getAttribute('href');
+  if ((path === '' || path === 'index.html') && href === 'index.html') {
+    link.classList.add('active');
+  } else if (path === href) {
+    link.classList.add('active');
+  } else if (href.startsWith('#') && window.location.hash === href) {
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
+});
+</script>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Projects</h2>
+      <p class="lead text-muted">Successfully implemented solar projects across India</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card" data-aos="zoom-in-up">
+          <img src="images/project1.jpg" class="img-fluid rounded shadow" alt="50MW Buldhana">
+          <div class="project-overlay">
+            <h3>50MW Buldhana</h3>
+            <p>Ground-mounted solar plant</p>
+            <a href="#" class="btn btn-sm btn-outline-light">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card" data-aos="zoom-in-up">
+          <img src="images/project2.jpg" class="img-fluid rounded shadow" alt="25MW Gwalior">
+          <div class="project-overlay">
+            <h3>25MW Gwalior</h3>
+            <p>Open access solar plant</p>
+            <a href="#" class="btn btn-sm btn-outline-light">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card" data-aos="zoom-in-up">
+          <img src="images/project3.jpg" class="img-fluid rounded shadow" alt="5MW Tuppadahalli">
+          <div class="project-overlay">
+            <h3>5MW Tuppadahalli</h3>
+            <p>Rooftop solar installation</p>
+            <a href="#" class="btn btn-sm btn-outline-light">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="projects.html" class="btn btn-success px-4">View All Projects</a>
+    </div>
+  </div>
+</section>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4 mb-lg-0 about-img-col">
+        <img src="images/about.png" alt="About Swami Green">
+      </div>
+      <div class="col-lg-6 about-text-col">
+        <div class="about-text-inner">
+          <h2 class="section-title mb-4">About Swami Green</h2>
+          <p class="lead">We are a leading solar energy solutions provider committed to India's renewable energy transition.</p>
+          <p>Founded in 2010, Swami Green has successfully implemented over 200MW of solar capacity across 8 states. Our team of certified professionals delivers end-to-end solutions with a focus on quality, reliability, and innovation.</p>
+          <div class="row mb-3">
+            <div class="col-6">
+              <div style="background:#f8f9fa;border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.7rem;font-weight:600;color:#28a745;">
+                <i class="fas fa-award me-2"></i> Deep experience<br>
+                <span style="color:#263238;font-weight:500;">500+ projects, 150+ MW</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div style="background:#f8f9fa;border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.7rem;font-weight:600;color:#28a745;">
+                <i class="fas fa-cogs me-2"></i> Our Services<br>
+                <span style="color:#263238;font-weight:500;">Open access, EPC & ITC, Asset Management</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>10+ Years Experience</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>50+ Projects</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>200MW Installed</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>8 States</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- Facts/Counter Section -->
+<section class="facts-section">
+  <div class="container">
+      <h2 class="facts-title">Know Us Better</h2>
+      <div class="facts-grid">
+          <!-- Fact 1 -->
+          <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="fact-number" data-target="400">0</div>
+              <div class="fact-title">Installation</div>
+          </div>
+          
+          <!-- Fact 2 -->
+          <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="fact-number" data-target="25000">0</div>
+              <div class="fact-title">Kilowatts</div>
+          </div>
+          
+          <!-- Fact 3 -->
+          <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="fact-number" data-target="400">0</div>
+              <div class="fact-title">Clients</div>
+          </div>
+          
+          <!-- Fact 4 -->
+          <div class="fact-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="fact-number" data-target="10">0</div>
+              <div class="fact-title">Awards & Certificates</div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- Clients Section -->
+<section class="clients-section">
+  <div class="container">
+      <h2 class="section-title">Our Valued Clients</h2>
+      <div class="marquee-wrapper">
+        <div class="clients-container marquee">
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="100"><img src="images/clients/client1.jpeg" alt="MEGHA ENGINEERING"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="200"><img src="images/clients/client2.jpeg" alt="RAVINDRA ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="300"><img src="images/clients/client3.jpeg" alt="SHRIPAD ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="400"><img src="images/clients/client4.jpeg" alt="SUZLON"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="500"><img src="images/clients/client5.jpeg" alt="MARCONI SOLAR"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="600"><img src="images/clients/client6.jpeg" alt="T&D INFRA ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="700"><img src="images/clients/client7.jpeg" alt="SAI LEGACY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client1.jpeg" alt="MEGHA ENGINEERING"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1200"><img src="images/clients/client2.jpeg" alt="RAVINDRA ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1300"><img src="images/clients/client3.jpeg" alt="SHRIPAD ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1400"><img src="images/clients/client4.jpeg" alt="SUZLON"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1500"><img src="images/clients/client5.jpeg" alt="MARCONI SOLAR"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1600"><img src="images/clients/client6.jpeg" alt="T&D INFRA ENERGY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1700"><img src="images/clients/client7.jpeg" alt="SAI LEGACY"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="2000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
+        </div>
+      </div>
+  </div>
+</section>
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
+</div>
+
+<!-- Leadership Messages Section -->
+<section class="leadership-section">
+  <div class="container">
+      <h2 class="section-title">Leadership Messages</h2>
+      
+      <div class="messages-container">
+          <!-- Chairman's Message -->
+          <div class="message-card">
+              <div class="leader-image">
+                  <img src="images/director.jpeg" alt="Shri Dattatray Dandgavhal, Chairman">
+              </div>
+              <div class="message-content">
+                  <h3 class="leader-name">Shri Dattatray Dandgavhal</h3>
+                  <p class="leader-position">Chairman, Swami Green</p>
+                  <div class="message-text">
+                      <p>"Swami Green stands on the foundation of trust, hard work, and a vision for a cleaner future. Through focused efforts in solar energy and transmission infrastructure, we aim to contribute meaningfully to India's energy progress. Our journey is guided by values, driven by innovation, and built for generations to come."</p>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Managing Director's Message -->
+          <div class="message-card">
+              <div class="leader-image">
+                  <img src="images/managing director.jpeg" alt="Sohan Dandgavhal, Managing Director">
+              </div>
+              <div class="message-content">
+                  <h3 class="leader-name">Sohan Dandgavhal</h3>
+                  <p class="leader-position">Managing Director, Swami Green</p>
+                  <div class="message-text">
+                      <p>"At Swami Green, our vision is to accelerate the transition to clean and sustainable energy. By investing in and executing high-quality renewable energy projects, we are not just generating power—we're building a greener, more resilient future. Our commitment lies in delivering long-term value through innovation, reliability, and environmental responsibility."</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section" id="values">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title" data-aos="fade-up">Our Values</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We are driven by principles that ensure quality, sustainability, and customer satisfaction.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Integrity</h3>
+        <p class="value-description">We uphold the highest standards of honesty and transparency in every project we undertake</p>
+      </div>
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 015.841-2.58m0 0V3m0 4.8a6 6 0 01-7.38 5.84"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Innovation</h3>
+        <p class="value-description">We embrace cutting-edge technologies and forward-thinking solutions to lead the renewable energy revolution</p>
+      </div>
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Creativity</h3>
+        <p class="value-description">We think beyond convention, delivering unique and effective solar solutions tailored to every need</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center mb-4" data-aos="fade-up">Testimonials</h2>
+    <p class="section-subtitle text-center mb-5" data-aos="fade-up" data-aos-delay="100">What our clients say about us</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-text">
+            <p>"I was very impressed with the professionalism and responsiveness of the Swami Energy team. They took care of all the processes and made it an easy process. "</p>
+          </div>
+          <div class="testimonial-author">
+            <!-- <img src="images/client1.jpg" alt="Client" class="rounded-circle"> -->
+            <div>
+              <h5>Mr. Bharat Solanki</h5>
+              <p class="text-muted">Eltron Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-text">
+            <p>"The Project Execution Planning is well convinced & amazing. We are delighted to have Swami Energy as Solar Power System Integrator for Our Project."</p>
+          </div>
+          <div class="testimonial-author">
+            <!-- <img src="images/client2.jpg" alt="Client" class="rounded-circle"> -->
+            <div>
+              <h5>Mr. Abdul Sattar</h5>
+              <p class="text-muted">Ahmedabad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-text">
+            <p>"The open access solar solution provided by Swami Green has been reliable and cost-effective for our manufacturing units. I highly recommend them"</p>
+          </div>
+          <div class="testimonial-author">
+            <!-- <img src="images/client3.jpg" alt="Client" class="rounded-circle"> -->
+            <div>
+              <h5>Mrs. Himangi Patel</h5>
+              <p class="text-muted">Ahmedabad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="section-title mb-4">Get In Touch</h2>
+        <p class="mb-4">Ready to discuss your solar energy requirements? Contact us today for a free consultation.</p>
+        <div class="contact-info mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-map-marker-alt text-success me-3"></i>
+            <p>123 Green Energy Park, Mumbai, Maharashtra 400001</p>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-phone-alt text-success me-3"></i>
+            <p>+91 9876543210</p>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-envelope text-success me-3"></i>
+            <p>info@swamigreen.com</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="text-success me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-success me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-success me-3"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-success"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <form class="contact-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="col-12">
+              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success px-4">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="text-success mb-3">Swami Green</h5>
+        <p>Leading solar energy solutions provider in India, committed to sustainable development and clean energy transition.</p>
+      </div>
+      <div class="col-md-2 mb-4 mb-md-0">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Home</a></li>
+          <li><a href="about.html" class="text-white">About</a></li>
+          <li><a href="services.html" class="text-white">Services</a></li>
+          <li><a href="projects.html" class="text-white">Projects</a></li>
+          <li><a href="calculator.html" class="text-white">Calculator</a></li>
+          <li><a href="#contact" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5>Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Solar EPC</a></li>
+          <li><a href="#" class="text-white">Land Services</a></li>
+          <li><a href="#" class="text-white">Open Access</a></li>
+          <li><a href="#" class="text-white">O&M Services</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Newsletter</h5>
+        <p>Subscribe to our newsletter for updates.</p>
+        <form class="mb-3">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <button class="btn btn-success" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">&copy; 2023 Swami Green. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="text-white me-3">Privacy Policy</a>
+        <a href="#" class="text-white">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
