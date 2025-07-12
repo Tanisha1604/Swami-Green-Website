@@ -28,6 +28,7 @@
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
         <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -41,69 +42,404 @@
     <h2 class="section-title text-center mb-4" data-aos="fade-up">Our Services</h2>
     <p class="section-subtitle text-center mb-5" data-aos="fade-up" data-aos-delay="100">Comprehensive solar solutions tailored for your needs</p>
     <div class="row g-4">
+      <!-- Open Access service card (short summary, consistent with others) -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="mb-3">
-            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-solar-panel fa-2x"></i></span>
+            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-bolt fa-2x"></i></span>
           </div>
-          <h5 class="mb-2">Solar EPC</h5>
-          <p class="mb-3">End-to-end Engineering, Procurement, and Construction for solar power plants, ensuring quality and timely delivery.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
+          <h5 class="mb-2">Open Access</h5>
+          <p class="mb-3">Buy clean solar power directly from developers through the grid—no rooftop panels needed. Lower your energy costs, lock in long-term rates, and boost your sustainability.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#openAccessModal">Learn More</button>
         </div>
       </div>
+      <!-- Land Services service card (short summary, consistent with others) -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="mb-3">
             <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-map-marked-alt fa-2x"></i></span>
           </div>
           <h5 class="mb-2">Land Services</h5>
-          <p class="mb-3">Land identification, acquisition, and due diligence for solar projects, with a focus on compliance and transparency.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
+          <p class="mb-3">End-to-end land procurement for solar, wind, and hybrid projects—site selection, legal due diligence, acquisition, and approvals in key renewable corridors.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#landServicesModal">Learn More</button>
         </div>
       </div>
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="300">
           <div class="mb-3">
-            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-bolt fa-2x"></i></span>
-          </div>
-          <h5 class="mb-2">Open Access</h5>
-          <p class="mb-3">Facilitating open access solar power for commercial and industrial clients, reducing energy costs and carbon footprint.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="400">
-          <div class="mb-3">
             <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-tools fa-2x"></i></span>
           </div>
-          <h5 class="mb-2">O&M Services</h5>
-          <p class="mb-3">Comprehensive Operations & Maintenance for solar assets, maximizing uptime and performance.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
+          <h5 class="mb-2">EPC & I&C Services</h5>
+          <p class="mb-3">Turnkey engineering, procurement, construction, and commissioning for solar and wind projects—quality, speed, and performance guaranteed.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#epcModal">Learn More</button>
         </div>
       </div>
+      <!-- Asset Management service card (short summary, consistent with others) -->
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="500">
-          <div class="mb-3">
-            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-lightbulb fa-2x"></i></span>
-          </div>
-          <h5 class="mb-2">Consulting</h5>
-          <p class="mb-3">Expert advisory on solar policy, project feasibility, and regulatory compliance for investors and developers.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="600">
+        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="400">
           <div class="mb-3">
             <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-chart-line fa-2x"></i></span>
           </div>
           <h5 class="mb-2">Asset Management</h5>
-          <p class="mb-3">Lifecycle management of solar assets, including monitoring, reporting, and performance optimization.</p>
-          <a href="#" class="btn btn-success">Learn More</a>
+          <p class="mb-3">Comprehensive management and optimization of solar, wind, and hybrid energy assets—maximize generation, ensure compliance, and boost ROI.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#assetModal">Learn More</button>
+        </div>
+      </div>
+      <!-- Finance service card (short summary, consistent with others) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="mb-3">
+            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-rupee-sign fa-2x"></i></span>
+          </div>
+          <h5 class="mb-2">Finance</h5>
+          <p class="mb-3">Flexible financing solutions for solar and wind projects—CAPEX, OPEX, group captive, leasing, and bank funding to fuel your clean energy growth.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#financeModal">Learn More</button>
+        </div>
+      </div>
+      <!-- Transmission Line service card (short summary, consistent with others) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 service-card text-center p-4" data-aos="zoom-in" data-aos-delay="600">
+          <div class="mb-3">
+            <span class="value-icon" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-broadcast-tower fa-2x"></i></span>
+          </div>
+          <h5 class="mb-2">Transmission Line</h5>
+          <p class="mb-3">Turnkey transmission line, substation, and switchyard solutions for seamless grid integration and reliable power evacuation from your renewable project.</p>
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#transmissionModal">Learn More</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal for Open Access details -->
+<div class="modal fade" id="openAccessModal" tabindex="-1" aria-labelledby="openAccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="openAccessModalLabel"><i class="fas fa-bolt me-2"></i>Open Access Solar: Clean, Affordable Power for Businesses</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>What is Open Access Solar?</b><br>
+          Open Access Solar lets large commercial and industrial consumers purchase solar electricity directly from off-site solar plants via the grid. There’s no need to install panels at your own facility. This model is regulated by state authorities and supported by the Electricity Act 2003, encouraging competition and renewable energy adoption.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-cogs text-success me-2"></i>How It Works</h5>
+        <ol>
+          <li><b>Solar Generation:</b> A solar plant generates electricity, either within your state or nearby.</li>
+          <li><b>Power Purchase Agreement (PPA):</b> You sign a long-term contract (10–25 years) with the developer at a stable, competitive rate—often much lower than local utility tariffs.</li>
+          <li><b>Grid Injection:</b> The solar power is fed into the state’s transmission and distribution network.</li>
+          <li><b>Delivery:</b> The grid delivers the power to your facility using existing infrastructure.</li>
+          <li><b>Billing & Credits:</b> You receive credits for the solar energy used on your electricity bill and pay only the required grid charges.</li>
+        </ol>
+        <h5 class="mt-3"><i class="fas fa-rupee-sign text-success me-2"></i>Why Choose Open Access?</h5>
+        <ul>
+          <li><b>Lower Energy Costs:</b> Pay ₹3.50–₹5.50/unit instead of ₹9.50–₹11.00/unit (varies by state).</li>
+          <li><b>Stable Pricing:</b> Lock in your energy rates for years, protecting against future price hikes.</li>
+          <li><b>No Upfront Investment:</b> No need for capital expenditure—just pay for the power you use.</li>
+          <li><b>Green Credentials:</b> Reduce your carbon footprint and meet sustainability or ESG goals.</li>
+          <li><b>Flexible Sourcing:</b> Choose what percentage of your energy comes from open access—25%, 50%, or even 100%.</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-industry text-success me-2"></i>Best For</h5>
+        <ul>
+          <li>Manufacturing plants</li>
+          <li>Data centers</li>
+          <li>Warehouses & logistics parks</li>
+          <li>Commercial complexes & malls</li>
+          <li>Large institutional campuses</li>
+        </ul>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Summary:</b> Open Access Solar is the smart way for businesses to cut energy bills and go green—without the hassle of installing their own solar panels. Start your journey to affordable, renewable power today!
+        </div>
+        <hr class="my-4">
+        <h5 class="text-success mb-3"><i class="fas fa-chart-bar me-2"></i>Cost Comparison: Typical Industrial Electricity Bill (5MW Example, Maharashtra)</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle text-center" style="background:#f8f9fa;">
+            <thead class="table-success">
+              <tr>
+                <th>Heads (₹)</th>
+                <th>Without Solar</th>
+                <th>With Solar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Demand Charges</td><td>₹ 1.29</td><td>₹ 1.29</td></tr>
+              <tr><td>Energy Charges</td><td>₹ 8.36</td><td>₹ 0</td></tr>
+              <tr><td>TOD Charges</td><td>₹ -0.25</td><td>₹ 0</td></tr>
+              <tr><td>Fuel Adj charges</td><td>₹ 0.36</td><td>₹ 0</td></tr>
+              <tr><td>Bulk Consumption Rebate</td><td>₹ 0</td><td>₹ 0</td></tr>
+              <tr><td>Electricity Duty</td><td>₹ 1.1</td><td>₹ 0</td></tr>
+              <tr><td>Tax on Sale</td><td>₹ 0.17</td><td>₹ 0.18</td></tr>
+              <tr><td>Wheeling charges</td><td>₹ 0.6</td><td>₹ 0.6</td></tr>
+              <tr><td>Transmission Charges</td><td>₹ 0</td><td>₹ 1</td></tr>
+              <tr><td>O&M Cost</td><td>₹ 0</td><td>₹ 0.3</td></tr>
+              <tr><td>Land Lease Cost</td><td>₹ 0</td><td>₹ 0.1</td></tr>
+            </tbody>
+            <tfoot>
+              <tr class="fw-bold bg-white">
+                <td>Total Cost</td>
+                <td style="color:#7c3aed;font-size:1.15rem;">₹ 11.63</td>
+                <td style="color:#059669;font-size:1.15rem;">₹ 3.47</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center mt-3">
+          <div class="p-3 rounded-3" style="background:#ede9fe;color:#7c3aed;font-weight:700;font-size:1.15rem;">Total cost/unit without Solar: ₹ 11.63</div>
+          <div class="p-3 rounded-3" style="background:#d1fae5;color:#059669;font-weight:700;font-size:1.15rem;">Total cost/unit with Solar: ₹ 3.47</div>
+          <div class="p-3 rounded-3" style="background:#fef9c3;color:#eab308;font-weight:800;font-size:1.25rem;">Net Earning Potential/unit: ₹ 8.16</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Land Services details -->
+<div class="modal fade" id="landServicesModal" tabindex="-1" aria-labelledby="landServicesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="landServicesModalLabel"><i class="fas fa-map-marked-alt me-2"></i>Land Procurement for Renewable Energy Projects</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>What is Land Procurement?</b><br>
+          Land procurement is the essential first step for any solar, wind, or hybrid renewable project. It means finding, acquiring, and securing land that meets all technical, legal, and commercial requirements—ensuring smooth project approvals and long-term security.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-tasks text-success me-2"></i>Our Key Land Services</h5>
+        <ul>
+          <li><b>Site Identification & Feasibility:</b> Select land based on solar/wind potential, grid proximity, and site suitability.</li>
+          <li><b>Due Diligence & Legal Verification:</b> Ownership checks, title search, and regulatory compliance.</li>
+          <li><b>Acquisition / Leasing:</b> Negotiate and execute purchase or long-term lease, with full legal support.</li>
+          <li><b>Land Conversion & Approvals:</b> Help with NA conversion, local authority permissions, and compliance.</li>
+          <li><b>Surveying & Plotting:</b> Drone/GPS mapping, boundary demarcation, and optimal plot layout.</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-map-pin text-success me-2"></i>Where We Work</h5>
+        <ul>
+          <li><b>Solar Parks & Land Banks:</b> Maharashtra, MP, Rajasthan, Karnataka, Telangana, Gujarat</li>
+          <li><b>Wind Corridors:</b> Beed, Osmanabad, Satara, Tirunelveli, Kutch</li>
+          <li><b>Hybrid Zones:</b> High wind-solar potential areas with grid access</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-check-circle text-success me-2"></i>Why Choose Us?</h5>
+        <ul>
+          <li>Local teams and strong on-ground network</li>
+          <li>Expertise in state policies and revenue laws</li>
+          <li>Transparent legal process and title verification</li>
+          <li>Trusted by developers for fast, compliant, investment-ready land</li>
+        </ul>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Ready to secure the right land for your renewable project?</b> Contact us for a fast, compliant, and investment-ready solution.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for EPC & I&C Services details -->
+<div class="modal fade" id="epcModal" tabindex="-1" aria-labelledby="epcModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="epcModalLabel"><i class="fas fa-tools me-2"></i>EPC & I&C Services for Renewable Energy Projects</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>What is EPC?</b><br>
+          EPC (Engineering, Procurement & Construction) is a turnkey solution where we handle everything from design and procurement to construction and delivery of your renewable energy project—ensuring on-time completion, quality, and performance guarantees.
+        </p>
+        <p><b>What is I&C?</b><br>
+          I&C (Installation & Commissioning) covers the expert installation, testing, and grid synchronization of your solar or wind system—ideal if you already have design and procurement handled but need a reliable technical partner for on-site execution.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-tasks text-success me-2"></i>Our EPC Scope of Work</h5>
+        <ul>
+          <li><b>Engineering:</b> Feasibility, design, layout, SLDs, civil and structural planning.</li>
+          <li><b>Procurement:</b> Sourcing Tier 1 modules, inverters, transformers, cables, and logistics.</li>
+          <li><b>Construction:</b> Civil works, module mounting, cabling, SCADA, and remote monitoring.</li>
+          <li><b>Testing & Commissioning:</b> System testing, grid synchronization, regulatory approvals, and handover with performance assurance.</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-bolt text-success me-2"></i>I&C Services</h5>
+        <ul>
+          <li>Module mounting, pile foundations, and structure assembly</li>
+          <li>DC & AC cable laying, inverter and transformer installation</li>
+          <li>Grid synchronization, relay setting, and protection testing</li>
+          <li>Post-commissioning support and system training</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-check-circle text-success me-2"></i>Why Choose Us?</h5>
+        <ul>
+          <li>End-to-end project management and fast-track execution</li>
+          <li>Skilled team with 50+ MW I&C experience</li>
+          <li>PAN India network and multi-state policy expertise</li>
+          <li>Strong vendor tie-ups for Tier 1 components</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-users text-success me-2"></i>Ideal For</h5>
+        <ul>
+          <li>Solar EPC Developers & IPPs</li>
+          <li>Captive & Group Captive Projects</li>
+          <li>Open Access Consumers</li>
+          <li>Rooftop & Ground-mounted Projects (1 MW to 100 MW+)</li>
+        </ul>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Ready for a seamless, high-performance renewable project?</b> Contact us for EPC & I&C solutions you can trust.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Asset Management details -->
+<div class="modal fade" id="assetModal" tabindex="-1" aria-labelledby="assetModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="assetModalLabel"><i class="fas fa-chart-line me-2"></i>Renewable Energy Asset Management: Maximizing Plant Performance & ROI</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>What is Renewable Energy Asset Management?</b><br>
+          Asset management means end-to-end supervision and optimization of solar, wind, or hybrid power projects throughout their lifecycle. It ensures your assets run efficiently, stay compliant, and deliver the best returns—crucial for investors, IPPs, and developers seeking consistent generation and long-term profitability.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-tasks text-success me-2"></i>Scope of Asset Management Services</h5>
+        <ul>
+          <li><b>Technical Monitoring & Analytics:</b> 24/7 remote monitoring, fault detection, and real-time performance analysis.</li>
+          <li><b>O&M Supervision:</b> Oversight of maintenance contractors, preventive/corrective schedules, and performance benchmarking.</li>
+          <li><b>Energy Forecasting & Reporting:</b> Generation forecasting, DSM compliance, and custom investor reports.</li>
+          <li><b>Regulatory & Compliance:</b> SLDC/DISCOM coordination, open access permissions, metering, and RPO/REC management.</li>
+          <li><b>Financial Oversight:</b> Revenue monitoring, billing, PPA tracking, and cost control.</li>
+          <li><b>Asset Health & Lifecycle:</b> Predictive analysis, capex planning, warranty, and insurance management.</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-star text-success me-2"></i>Why is Asset Management Crucial?</h5>
+        <ul>
+          <li>Maximized generation and proactive fault correction</li>
+          <li>Higher returns through reduced downtime and losses</li>
+          <li>Regulatory peace of mind and compliance</li>
+          <li>Investor confidence with transparent reporting</li>
+          <li>Longer plant life through optimized maintenance</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-users text-success me-2"></i>Who Needs Asset Management?</h5>
+        <ul>
+          <li>Solar & Wind Project Developers</li>
+          <li>IPPs (Independent Power Producers)</li>
+          <li>Corporate Open Access Consumers</li>
+          <li>Investment Funds in Renewables</li>
+          <li>Captive Power Producers</li>
+          <li>DISCOMs outsourcing renewable plants</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-certificate text-success me-2"></i>Our Expertise</h5>
+        <p>We combine technology, analytics, and on-ground know-how to unlock the full potential of your renewable assets. Whether you have a 1 MW solar plant or a 100 MW hybrid project, our services are tailored for performance, transparency, and reliability.<br>Partner with us to keep your green energy assets running at their peak—day after day, year after year.</p>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Ready to maximize your plant's performance and returns?</b> Contact us for expert asset management solutions.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Finance details -->
+<div class="modal fade" id="financeModal" tabindex="-1" aria-labelledby="financeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="financeModalLabel"><i class="fas fa-rupee-sign me-2"></i>Financing for Renewable Energy Projects</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>Fuel Your Project with Flexible, Scalable Finance</b><br>
+          The right financing model makes renewable energy projects accessible and profitable—reducing upfront costs, speeding up ROI, and unlocking scale. We offer end-to-end financial solutions tailored to your project and regulatory needs.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-layer-group text-success me-2"></i>Financing Models We Support</h5>
+        <ul>
+          <li><b>CAPEX Model:</b> 100% upfront investment, full asset ownership, maximum savings—best for those with low-cost capital.</li>
+          <li><b>OPEX / RESCO Model:</b> No upfront cost, pay per kWh, asset owned and operated by developer—ideal for asset-light industries.</li>
+          <li><b>Group Captive Model:</b> Consumer co-owns plant, gets cross-subsidy waiver, mix of equity and debt—popular for open access projects.</li>
+          <li><b>Lease Financing:</b> Monthly rentals, option to buy after lease, off-balance sheet—flexible for long-term users.</li>
+          <li><b>Bank Loan & NBFC Funding:</b> Term loans at competitive rates, project finance, working capital, and bridge loans.</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-hands-helping text-success me-2"></i>Our Financing Support Includes</h5>
+        <ul>
+          <li>DPR and financial modeling</li>
+          <li>PPA structuring and revenue estimation</li>
+          <li>Liaison with banks, NBFCs, investors, and leasing partners</li>
+          <li>End-to-end documentation and sanction support</li>
+          <li>Loan tie-up with PSU and private sector banks</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-bolt text-success me-2"></i>Why Financing Matters</h5>
+        <ul>
+          <li>Reduces burden of high capital cost</li>
+          <li>Unlocks scale for large utility & open access projects</li>
+          <li>Increases investor confidence</li>
+          <li>Faster project execution with better cash flow planning</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-users text-success me-2"></i>Who Can Benefit?</h5>
+        <ul>
+          <li>Industrial & Commercial Consumers</li>
+          <li>Solar & Wind Developers</li>
+          <li>Rooftop Solar Customers</li>
+          <li>Captive & Open Access Power Users</li>
+          <li>IPPs (Independent Power Producers)</li>
+        </ul>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Ready to finance your next renewable project?</b> Contact us for tailored solutions and expert support.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Transmission Line details -->
+<div class="modal fade" id="transmissionModal" tabindex="-1" aria-labelledby="transmissionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="transmissionModalLabel"><i class="fas fa-broadcast-tower me-2"></i>Transmission Line, Solar Substation & Switchyard Solutions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <p><b>Building the Backbone of Renewable Energy Projects</b><br>
+          We deliver end-to-end solutions for transmission lines, substations, and switchyards—ensuring your solar or wind project is seamlessly integrated with the grid, fully compliant, and optimized for maximum energy transfer.
+        </p>
+        <h5 class="mt-3"><i class="fas fa-route text-success me-2"></i>Transmission Line Services (11kV–220kV)</h5>
+        <ul>
+          <li>Route survey, feasibility, and design</li>
+          <li>Tower/pole design, erection, and conductor stringing</li>
+          <li>Insulator, earthwire, and hardware installation</li>
+          <li>Testing, energization, and DISCOM/STU liaison</li>
+          <li>Single/double circuit, monopole/lattice, HTLS/ACSR/AL59 conductors</li>
+          <li>CEA, IEC, and state regulation compliance</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-charging-station text-success me-2"></i>Solar Power Substation (PSS)</h5>
+        <ul>
+          <li>Power transformers, HT/LT panels, circuit breakers, isolators, CTs/PTs, LA</li>
+          <li>Auxiliary AC/DC, SCADA, remote monitoring, metering</li>
+          <li>Electrical design, procurement, installation, protection, relay coordination</li>
+          <li>SLDC/DISCOM approvals, testing, and commissioning</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-network-wired text-success me-2"></i>Switchyard Solutions</h5>
+        <ul>
+          <li>Layout, civil works, busbar arrangement, breakers, isolators, control panels</li>
+          <li>Earthing, fencing, drainage, relay/control room, fire/lightning protection</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-check-circle text-success me-2"></i>Why Choose Us?</h5>
+        <ul>
+          <li>Proven experience from 11kV to 220kV</li>
+          <li>Compliance with CEA, CEIG, and state utility norms</li>
+          <li>Fast-track execution with QA/QC</li>
+          <li>SCADA & remote control integration</li>
+          <li>Turnkey delivery from design to energization</li>
+        </ul>
+        <h5 class="mt-3"><i class="fas fa-solar-panel text-success me-2"></i>Our Expertise Covers</h5>
+        <ul>
+          <li>Utility-scale solar plants (1 MW to 100 MW+)</li>
+          <li>Open access & group captive projects</li>
+          <li>Wind-solar hybrid evacuation</li>
+          <li>Grid-connected/islanded microgrids</li>
+          <li>Rooftop solar with HT/LT grid tie-up</li>
+        </ul>
+        <div class="alert alert-success mt-3 mb-0">
+          <b>Ready for seamless grid integration?</b> Contact us for expert transmission and substation solutions.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white py-4" data-aos="fade-up" data-aos-delay="100">
@@ -127,10 +463,12 @@
       <div class="col-md-3 mb-4 mb-md-0">
         <h5>Services</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white">Solar EPC</a></li>
-          <li><a href="#" class="text-white">Land Services</a></li>
           <li><a href="#" class="text-white">Open Access</a></li>
-          <li><a href="#" class="text-white">O&M Services</a></li>
+          <li><a href="#" class="text-white">Land Services</a></li>
+          <li><a href="#" class="text-white">EPC & I&C Services</a></li>
+          <li><a href="#" class="text-white">Asset Management</a></li>
+          <li><a href="#" class="text-white">Finance</a></li>
+          <li><a href="#" class="text-white">Transmission Line</a></li>
         </ul>
       </div>
       <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">

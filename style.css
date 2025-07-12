@@ -625,8 +625,8 @@ body {
   
   .leader-image {
       flex: 0 0 200px;
-  }
-  
+}
+
   .message-content {
       padding: 1.5rem;
   }
@@ -764,8 +764,8 @@ body {
   }
   
   .value-icon {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
   }
   
   .value-icon svg {
@@ -1531,4 +1531,13 @@ h1, h2, h3, h4, h5, h6, .section-title, .facts-title {
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+.fact-number.animated-pulse {
+  animation: pulse 0.5s cubic-bezier(.4,0,.2,1);
 }

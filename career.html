@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career - Swami Green</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .career-hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/solar-bg.jpg') no-repeat center center/cover;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .career-card {
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(40,167,69,0.10);
+      transition: all 0.3s ease;
+      background: #fff;
+      overflow: hidden;
+    }
+    .career-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(40,167,69,0.18);
+    }
+    .career-card .card-header {
+      background: linear-gradient(135deg, #28a745 0%, #43e97b 100%);
+      color: white;
+      border: none;
+      padding: 1.5rem;
+    }
+    .job-tag {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .benefits-section {
+      background: linear-gradient(135deg, #e6f4ea 0%, #f4f7f6 100%);
+      padding: 4rem 0;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(40,167,69,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid #28a745;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(40,167,69,0.15);
+    }
+    .benefit-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #28a745 0%, #43e97b 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 2rem;
+    }
+    .apply-btn {
+      background: linear-gradient(135deg, #28a745 0%, #43e97b 100%);
+      border: none;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .apply-btn:hover {
+      background: linear-gradient(135deg, #155d27 0%, #28a745 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(40,167,69,0.3);
+      color: white;
+    }
+    .stats-section {
+      background: #28a745;
+      color: white;
+      padding: 3rem 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .culture-section {
+      background: #f8f9fa;
+      padding: 4rem 0;
+    }
+    .culture-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .culture-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .culture-icon {
+      width: 60px;
+      height: 60px;
+      background: #e6f4ea;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #28a745;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      .career-hero {
+        min-height: 400px;
+        text-align: center;
+      }
+      .benefit-card {
+        margin-bottom: 2rem;
+      }
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="Swami Green Logo" height="40" class="d-inline-block align-top me-2">
+      <span class="fw-bold text-success">Swami Green</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link active" href="career.html">Career</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="career-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-4">Join Our Green Revolution</h1>
+        <p class="lead mb-4">Be part of a team that's powering India's sustainable future. We're looking for passionate professionals who want to make a difference in renewable energy.</p>
+        <a href="#openings" class="btn btn-success btn-lg px-4 py-2">View Open Positions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <div class="stat-label">Team Members</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">8</span>
+          <div class="stat-label">States Covered</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">7+</span>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Culture Section -->
+<section class="culture-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-success mb-3">Our Culture</h2>
+      <div class="animated-underline"></div>
+      <p class="lead text-muted mt-4">We foster an environment of innovation, collaboration, and sustainability</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h4>Innovation</h4>
+          <p>We encourage creative thinking and innovative solutions to advance renewable energy technology.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Collaboration</h4>
+          <p>Teamwork is at the heart of everything we do. We believe in the power of diverse perspectives.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h4>Sustainability</h4>
+          <p>We're committed to environmental responsibility both in our work and workplace practices.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h4>Growth</h4>
+          <p>Continuous learning and professional development opportunities for all team members.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4>Wellness</h4>
+          <p>We prioritize the health and well-being of our employees with comprehensive benefits.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="culture-card">
+          <div class="culture-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h4>Excellence</h4>
+          <p>We strive for excellence in every project and maintain the highest quality standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-success mb-3">Why Work With Us</h2>
+      <div class="animated-underline"></div>
+      <p class="lead text-muted mt-4">We offer comprehensive benefits to support your professional and personal growth</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-medical-kit"></i>
+          </div>
+          <h5>Health Insurance</h5>
+          <p>Comprehensive health coverage for you and your family</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h5>Learning & Development</h5>
+          <p>Continuous training and skill development programs</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h5>Flexible Work</h5>
+          <p>Flexible working hours and remote work options</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h5>Performance Bonus</h5>
+          <p>Performance-based bonuses and incentives</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Job Openings Section -->
+<section id="openings" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-success mb-3">Current Openings</h2>
+      <div class="animated-underline"></div>
+      <p class="lead text-muted mt-4">Join our team and help us build a sustainable future</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="career-card">
+          <div class="card-header">
+            <h4 class="mb-2">Solar Project Engineer</h4>
+            <div class="mb-2">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag">Mumbai</span>
+              <span class="job-tag">3-5 years</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">We're looking for an experienced Solar Project Engineer to lead solar installation projects from conception to completion.</p>
+            <h6>Key Responsibilities:</h6>
+            <ul class="mb-3">
+              <li>Design and oversee solar installation projects</li>
+              <li>Coordinate with clients and contractors</li>
+              <li>Ensure compliance with safety standards</li>
+              <li>Manage project timelines and budgets</li>
+            </ul>
+            <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Solar Project Engineer">Apply Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="career-card">
+          <div class="card-header">
+            <h4 class="mb-2">Business Development Manager</h4>
+            <div class="mb-2">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag">Delhi</span>
+              <span class="job-tag">5-7 years</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">Drive business growth by developing new client relationships and expanding our market presence in the renewable energy sector.</p>
+            <h6>Key Responsibilities:</h6>
+            <ul class="mb-3">
+              <li>Identify and pursue new business opportunities</li>
+              <li>Build and maintain client relationships</li>
+              <li>Develop strategic partnerships</li>
+              <li>Lead sales presentations and negotiations</li>
+            </ul>
+            <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Business Development Manager">Apply Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="career-card">
+          <div class="card-header">
+            <h4 class="mb-2">Solar Technician</h4>
+            <div class="mb-2">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag">Pune</span>
+              <span class="job-tag">1-3 years</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">Join our field operations team to install, maintain, and troubleshoot solar energy systems.</p>
+            <h6>Key Responsibilities:</h6>
+            <ul class="mb-3">
+              <li>Install solar panels and related equipment</li>
+              <li>Perform system maintenance and repairs</li>
+              <li>Conduct quality inspections</li>
+              <li>Ensure safety protocols are followed</li>
+            </ul>
+            <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Solar Technician">Apply Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="career-card">
+          <div class="card-header">
+            <h4 class="mb-2">Marketing Specialist</h4>
+            <div class="mb-2">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag">Bangalore</span>
+              <span class="job-tag">2-4 years</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">Create compelling marketing campaigns to promote our solar energy solutions and build brand awareness.</p>
+            <h6>Key Responsibilities:</h6>
+            <ul class="mb-3">
+              <li>Develop marketing strategies and campaigns</li>
+              <li>Create content for digital and print media</li>
+              <li>Manage social media presence</li>
+              <li>Track and analyze marketing performance</li>
+            </ul>
+            <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Marketing Specialist">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Apply Modal -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Apply for <span id="jobTitle"></span></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="applicationForm">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone *</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="experience" class="form-label">Years of Experience *</label>
+            <select class="form-select" id="experience" required>
+              <option value="">Select experience level</option>
+              <option value="0-1">0-1 years</option>
+              <option value="1-3">1-3 years</option>
+              <option value="3-5">3-5 years</option>
+              <option value="5-7">5-7 years</option>
+              <option value="7+">7+ years</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="resume" class="form-label">Resume/CV *</label>
+            <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx" required>
+            <div class="form-text">Upload your resume in PDF, DOC, or DOCX format (max 5MB)</div>
+          </div>
+          <div class="mb-3">
+            <label for="coverLetter" class="form-label">Cover Letter</label>
+            <textarea class="form-control" id="coverLetter" rows="4" placeholder="Tell us why you're interested in this position..."></textarea>
+          </div>
+          <div class="text-end">
+            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-success">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="text-success mb-3">Swami Green</h5>
+        <p>Leading solar energy solutions provider in India, committed to sustainable development and clean energy transition.</p>
+      </div>
+      <div class="col-md-2 mb-4 mb-md-0">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="about.html" class="text-white">About</a></li>
+          <li><a href="services.html" class="text-white">Services</a></li>
+          <li><a href="projects.html" class="text-white">Projects</a></li>
+          <li><a href="calculator.html" class="text-white">Calculator</a></li>
+          <li><a href="career.html" class="text-white">Career</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5>Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Open Access</a></li>
+          <li><a href="#" class="text-white">Solar EPC</a></li>
+          <li><a href="#" class="text-white">Land Services</a></li>
+          <li><a href="#" class="text-white">O&M Services</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Contact Info</h5>
+        <p><i class="fas fa-envelope me-2"></i> careers@swamigreen.com</p>
+        <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Mumbai, Maharashtra</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">&copy; 2023 Swami Green. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="text-white me-3">Privacy Policy</a>
+        <a href="#" class="text-white">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Set job title in modal
+document.addEventListener('DOMContentLoaded', function() {
+  const applyModal = document.getElementById('applyModal');
+  const jobTitleSpan = document.getElementById('jobTitle');
+  
+  applyModal.addEventListener('show.bs.modal', function(event) {
+    const button = event.relatedTarget;
+    const jobTitle = button.getAttribute('data-job');
+    jobTitleSpan.textContent = jobTitle;
+  });
+  
+  // Handle form submission
+  const applicationForm = document.getElementById('applicationForm');
+  applicationForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your application! We will review your submission and get back to you soon.');
+    const modal = bootstrap.Modal.getInstance(applyModal);
+    modal.hide();
+    applicationForm.reset();
+  });
+  
+  // Highlight active nav link
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === 'career.html') {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
+</script>
+</body>
+</html> 

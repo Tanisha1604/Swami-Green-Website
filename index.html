@@ -111,6 +111,7 @@
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
@@ -215,6 +216,62 @@ navLinks.forEach(link => {
     link.classList.remove('active');
   }
 });
+
+// Improved animated counting for Know Us Better section (robust against NaN)
+function animateCount(el, target, duration = 1200) {
+  // Extract the first number from the string
+  const match = target.match(/(\d+)/);
+  if (!match) {
+    el.textContent = target;
+    return;
+  }
+  const pureNumber = parseInt(match[1], 10);
+  const suffix = target.replace(match[1], '');
+  let startTime = null;
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const value = Math.floor(progress * pureNumber);
+    el.textContent = value + suffix;
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    } else {
+      el.textContent = target;
+      el.classList.add('animated-pulse'); // Add pulse effect
+      setTimeout(() => el.classList.remove('animated-pulse'), 600); // Remove after animation
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function runFactCounters() {
+  const facts = document.querySelectorAll('.fact-card .fact-number');
+  facts.forEach(fact => {
+    const target = fact.getAttribute('data-target');
+    fact.textContent = '0' + (target ? target.replace(/^(\d+)/, '') : '');
+    animateCount(fact, target);
+  });
+}
+
+// Immediately run the Know Us Better number animation on page load
+runFactCounters();
+
+// Use IntersectionObserver to trigger animation when section is in view
+const factsSection = document.querySelector('.facts-section');
+let factsAnimated = false;
+if (factsSection) {
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !factsAnimated) {
+        setTimeout(() => {
+          runFactCounters();
+        }, 900); // Delay to allow AOS fade-up to finish
+        factsAnimated = true;
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(factsSection);
+}
 </script>
 
 
@@ -267,7 +324,7 @@ navLinks.forEach(link => {
   <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
 </div>
 
-<!-- About Section -->
+<!-- Enhanced About Section on Home Page -->
 <section id="about">
   <div class="container">
     <div class="row">
@@ -276,45 +333,46 @@ navLinks.forEach(link => {
       </div>
       <div class="col-lg-6 about-text-col">
         <div class="about-text-inner">
-          <h2 class="section-title mb-4">About Swami Green</h2>
+        <h2 class="section-title mb-4">About Swami Green</h2>
+          <div class="row g-3 mb-4">
+          <div class="col-6">
+              <div class="p-3 rounded-3 shadow-sm d-flex align-items-center gap-3" style="background:#e6f4ea;">
+                <span class="text-success" style="font-size:1.7rem;"><i class="fas fa-flag"></i></span>
+                <div>
+                  <div class="fw-bold">Journey</div>
+                  <div class="small">Started in 2018</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 rounded-3 shadow-sm d-flex align-items-center gap-3" style="background:#fffbe6;">
+                <span class="text-warning" style="font-size:1.7rem;"><i class="fas fa-award"></i></span>
+                <div>
+                  <div class="fw-bold">Deep Experience</div>
+                  <div class="small">200+ projects, 200+ MW</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 rounded-3 shadow-sm d-flex align-items-center gap-3" style="background:#e6f0fa;">
+                <span class="text-primary" style="font-size:1.7rem;"><i class="fas fa-calendar-alt"></i></span>
+                <div>
+                  <div class="fw-bold">7+ Years</div>
+                  <div class="small">Experience</div>
+            </div>
+          </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 rounded-3 shadow-sm d-flex align-items-center gap-3" style="background:#fce7f3;">
+                <span class="text-danger" style="font-size:1.7rem;"><i class="fas fa-building"></i></span>
+                <div>
+                  <div class="fw-bold">50+ Big Projects</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="lead">We are a leading solar energy solutions provider committed to India's renewable energy transition.</p>
           <p>Founded in 2010, Swami Green has successfully implemented over 200MW of solar capacity across 8 states. Our team of certified professionals delivers end-to-end solutions with a focus on quality, reliability, and innovation.</p>
-          <div class="row mb-3">
-            <div class="col-6">
-              <div style="background:#f8f9fa;border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.7rem;font-weight:600;color:#28a745;">
-                <i class="fas fa-award me-2"></i> Deep experience<br>
-                <span style="color:#263238;font-weight:500;">500+ projects, 150+ MW</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div style="background:#f8f9fa;border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.7rem;font-weight:600;color:#28a745;">
-                <i class="fas fa-cogs me-2"></i> Our Services<br>
-                <span style="color:#263238;font-weight:500;">Open access, EPC & ITC, Asset Management</span>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-check-circle text-success me-2"></i>
-                <span>10+ Years Experience</span>
-              </div>
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-check-circle text-success me-2"></i>
-                <span>50+ Projects</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-check-circle text-success me-2"></i>
-                <span>200MW Installed</span>
-              </div>
-              <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-check-circle text-success me-2"></i>
-                <span>8 States</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -324,35 +382,28 @@ navLinks.forEach(link => {
   <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="60"><path d="M0 0H1440V60C960 40 480 40 0 60V0Z" fill="#f4f7f6"/></svg>
 </div>
 
-<!-- Facts/Counter Section -->
+<!-- Update Know Us Better Section on Home Page with data-target for animation -->
 <section class="facts-section">
   <div class="container">
-      <h2 class="facts-title">Know Us Better</h2>
-      <div class="facts-grid">
-          <!-- Fact 1 -->
-          <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="fact-number" data-target="400">0</div>
-              <div class="fact-title">Installation</div>
-          </div>
-          
-          <!-- Fact 2 -->
-          <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="fact-number" data-target="25000">0</div>
-              <div class="fact-title">Kilowatts</div>
-          </div>
-          
-          <!-- Fact 3 -->
-          <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="fact-number" data-target="400">0</div>
-              <div class="fact-title">Clients</div>
-          </div>
-          
-          <!-- Fact 4 -->
-          <div class="fact-card" data-aos="fade-up" data-aos-delay="400">
-              <div class="fact-number" data-target="10">0</div>
-              <div class="fact-title">Awards & Certificates</div>
-          </div>
+    <h2 class="facts-title mb-5 text-center">Know Us Better</h2>
+    <div class="facts-grid">
+      <div class="fact-card text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="fact-number" data-target="1000+">1000+</div>
+        <div class="fact-title">Visit Small & Big Installation</div>
       </div>
+      <div class="fact-card text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="fact-number" data-target="2000+">2000+</div>
+        <div class="fact-title">kW Installed</div>
+      </div>
+      <div class="fact-card text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="fact-number" data-target="600+">600+</div>
+        <div class="fact-title">Clients</div>
+      </div>
+      <div class="fact-card text-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="fact-number" data-target="10+">10+</div>
+        <div class="fact-title">Award & Certificate</div>
+      </div>
+    </div>
   </div>
 </section>
 <div class="section-divider">
@@ -532,16 +583,16 @@ navLinks.forEach(link => {
         <p class="mb-4">Ready to discuss your solar energy requirements? Contact us today for a free consultation.</p>
         <div class="contact-info mb-4">
           <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-map-marker-alt text-success me-3"></i>
-            <p>123 Green Energy Park, Mumbai, Maharashtra 400001</p>
-          </div>
-          <div class="d-flex align-items-center mb-3">
             <i class="fas fa-phone-alt text-success me-3"></i>
-            <p>+91 9876543210</p>
+            <p>8600805012</p>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="fas fa-envelope text-success me-3"></i>
-            <p>info@swamigreen.com</p>
+            <p>info@swamirenewable.com</p>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-map-marker-alt text-success me-3"></i>
+            <p>18/2 Ramdas Colony, near Gold Gym, M.J. College Road, Jalgaon, 425001 Maharashtra</p>
           </div>
         </div>
         <div class="social-links">
@@ -599,9 +650,9 @@ navLinks.forEach(link => {
       <div class="col-md-3 mb-4 mb-md-0">
         <h5>Services</h5>
         <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Open Access</a></li>
           <li><a href="#" class="text-white">Solar EPC</a></li>
           <li><a href="#" class="text-white">Land Services</a></li>
-          <li><a href="#" class="text-white">Open Access</a></li>
           <li><a href="#" class="text-white">O&M Services</a></li>
         </ul>
       </div>

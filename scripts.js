@@ -1,6 +1,16 @@
 // Service data
 const services = [
   {
+    title: "Open Access",
+    features: [
+      "Facilitating solar solutions for industries",
+      "Clean energy at competitive rates",
+      "End-to-end documentation support",
+      "Cross-state open access solutions"
+    ],
+    description: "We simplify the complex open access process, helping industries transition to solar power with significant cost savings and hassle-free compliance."
+  },
+  {
     title: "Land Procurement",
     features: [
       "Identifying and acquiring suitable land for solar project development",
@@ -29,16 +39,6 @@ const services = [
       "Quality assurance and performance guarantees"
     ],
     description: "From design to commissioning, we handle every aspect of your solar project with precision, ensuring optimal performance and timely completion."
-  },
-  {
-    title: "Open Access",
-    features: [
-      "Facilitating solar solutions for industries",
-      "Clean energy at competitive rates",
-      "End-to-end documentation support",
-      "Cross-state open access solutions"
-    ],
-    description: "We simplify the complex open access process, helping industries transition to solar power with significant cost savings and hassle-free compliance."
   },
   {
     title: "Finance",
@@ -160,49 +160,49 @@ function openModal(index) {
 }
 
 // --- FACTS/COUNTER SECTION ---
-(function() {
-  let animated = false;
-  function animateCounters() {
-    if (animated) return;
-    const counters = document.querySelectorAll('.fact-number');
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = +counter.innerText.replace(/,/g, '');
-      const increment = Math.ceil(target / 120);
-      function updateCount() {
-        if (count < target) {
-          count = Math.min(count + increment, target);
-          counter.innerText = count.toLocaleString();
-          setTimeout(updateCount, 18);
-        } else {
-          counter.innerText = target.toLocaleString();
-        }
-      }
-      updateCount();
-    });
-    animated = true;
-  }
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-  function checkScroll() {
-    const factsSection = document.querySelector('.facts-section');
-    if (factsSection && isInViewport(factsSection) && !factsSection.classList.contains('animated')) {
-      animateCounters();
-      factsSection.classList.add('animated');
-    }
-  }
-  document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('scroll', checkScroll);
-    checkScroll();
-  });
-})();
+// (function() {
+//   let animated = false;
+//   function animateCounters() {
+//     if (animated) return;
+//     const counters = document.querySelectorAll('.fact-number');
+//     counters.forEach(counter => {
+//       const target = +counter.getAttribute('data-target');
+//       let count = +counter.innerText.replace(/,/g, '');
+//       const increment = Math.ceil(target / 120);
+//       function updateCount() {
+//         if (count < target) {
+//           count = Math.min(count + increment, target);
+//           counter.innerText = count.toLocaleString();
+//           setTimeout(updateCount, 18);
+//         } else {
+//           counter.innerText = target.toLocaleString();
+//         }
+//       }
+//       updateCount();
+//     });
+//     animated = true;
+//   }
+//   function isInViewport(element) {
+//     const rect = element.getBoundingClientRect();
+//     return (
+//       rect.top >= 0 &&
+//       rect.left >= 0 &&
+//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+//   }
+//   function checkScroll() {
+//     const factsSection = document.querySelector('.facts-section');
+//     if (factsSection && isInViewport(factsSection) && !factsSection.classList.contains('animated')) {
+//       animateCounters();
+//       factsSection.classList.add('animated');
+//     }
+//   }
+//   document.addEventListener('DOMContentLoaded', function() {
+//     window.addEventListener('scroll', checkScroll);
+//     checkScroll();
+//   });
+// })();
 
 document.addEventListener('DOMContentLoaded', function() {
   // Animation for the leadership section
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
   }
-  
+
   // Initialize cards with hidden state
   messageCards.forEach(card => {
       card.style.opacity = '0';
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check on load and scroll
   window.addEventListener('load', checkScroll);
   window.addEventListener('scroll', checkScroll);
-  
+
   // Add hover effect for touch devices
   function handleTouchHover() {
       if ('ontouchstart' in window) {
