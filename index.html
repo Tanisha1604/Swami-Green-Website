@@ -11,7 +11,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=1.1">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    body, .navbar, .btn, .form-control, .section-title, .brand-title, .brand-subtitle, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea {
+      font-family: 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif !important;
+      letter-spacing: 0.01em;
+    }
+    /* Optionally, slightly bolder headings for a modern look */
+    h1, h2, h3, .section-title, .brand-title {
+      font-weight: 700 !important;
+      letter-spacing: 0.01em;
+    }
+    .brand-title {
+      font-weight: 800 !important;
+    }
+    .brand-subtitle {
+      font-weight: 500 !important;
+    }
     .hero-btn {
       font-size: 1.25rem;
       font-weight: 700;
@@ -93,76 +110,129 @@
     html {
       scroll-behavior: smooth;
     }
+    .navbar-glass {
+      background: rgba(255,255,255,0.92) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 24px 0 rgba(40,167,69,0.10), 0 1.5px 0px #28a74511;
+      border-bottom: 1px solid #e6f4ea;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .navbar-brand .brand-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #198754;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+    .navbar-brand .brand-subtitle {
+      font-size: 0.95rem;
+      color: #6c757d;
+      font-weight: 500;
+      margin-top: 0.1rem;
+    }
+    .navbar-nav .nav-link {
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #222 !important;
+      border-radius: 0.5rem;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      padding-top: 0.7rem !important;
+      padding-bottom: 0.7rem !important;
+      margin: 0 0.1rem;
+    }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      background: #e6f4ea;
+      color: #198754 !important;
+      box-shadow: 0 2px 8px #43e97b22;
+    }
+    .navbar-toggler {
+      border: none;
+      outline: none;
+      box-shadow: none !important;
+      padding: 0.6rem 0.8rem;
+      border-radius: 0.5rem;
+      background: #e6f4ea;
+      transition: background 0.2s;
+    }
+    .navbar-toggler:focus {
+      background: #c6f7e2;
+    }
+    .btn-quote {
+      background: linear-gradient(90deg, #28a745 0%, #43e97b 100%);
+      color: #fff !important;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 16px #43e97b33;
+      padding: 0.7rem 2rem;
+      font-size: 1.08rem;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    }
+    .btn-quote:hover, .btn-quote:focus {
+      background: linear-gradient(90deg, #155d27 0%, #43e97b 100%);
+      color: #fff !important;
+      box-shadow: 0 8px 24px #43e97b44;
+    }
+    @media (max-width: 991.98px) {
+      .navbar-nav .nav-link {
+        margin: 0.2rem 0;
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+      }
+      .btn-quote {
+        width: 100%;
+        margin-top: 0.7rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- Enhanced Professional Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-lg" style="backdrop-filter: blur(10px); background: rgba(255,255,255,0.95) !important;">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="images/logo.png" alt="Swami Renewable Logo" height="45" class="d-inline-block align-top me-3">
-      <div>
-        <span class="fw-bold text-success fs-4">Swami Renewable</span>
-        <div class="small text-muted">Solar Energy Solutions</div>
+  <!-- Enhanced Professional Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
+        <img src="images/logo.png" alt="Swami Renewable Logo" height="48" class="d-inline-block align-top" style="border-radius:12px;box-shadow:0 2px 8px #43e97b22;">
+        <div>
+          <div class="brand-title">Swami Renewable</div>
+          <div class="brand-subtitle">Solar Energy Solutions</div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html"><i class="fas fa-cogs me-1"></i>Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html"><i class="fas fa-project-diagram me-1"></i>Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculator.html"><i class="fas fa-calculator me-1"></i>Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="career.html"><i class="fas fa-briefcase me-1"></i>Career</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#testimonials"><i class="fas fa-star me-1"></i>Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact"><i class="fas fa-envelope me-1"></i>Contact</a>
+          </li>
+        </ul>
       </div>
-    </a>
-    
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html">
-            <i class="fas fa-home me-1"></i>Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="about.html">
-            <i class="fas fa-info-circle me-1"></i>About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="services.html">
-            <i class="fas fa-cogs me-1"></i>Services
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="projects.html">
-            <i class="fas fa-project-diagram me-1"></i>Projects
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="calculator.html">
-            <i class="fas fa-calculator me-1"></i>Calculator
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="career.html">
-            <i class="fas fa-briefcase me-1"></i>Career
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html#testimonials">
-            <i class="fas fa-star me-1"></i>Testimonials
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html#contact">
-            <i class="fas fa-envelope me-1"></i>Contact
-          </a>
-        </li>
-        <li class="nav-item ms-3">
-          <a class="btn btn-success px-4 py-2 rounded-pill fw-medium" href="index.html#contact">
-            <i class="fas fa-phone me-1"></i>Get Quote
-          </a>
-        </li>
-      </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+
 
 <!-- Hero Section -->
 
@@ -471,6 +541,7 @@ if (factsSection) {
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client11.jpeg" alt="RYZON Green"><!-- Check that this file exists and is a valid .jpeg --></div>
           <!-- Duplicate for seamless loop -->
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client1.jpeg" alt="MEGHA ENGINEERING"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1200"><img src="images/clients/client2.jpeg" alt="RAVINDRA ENERGY"></div>
@@ -482,6 +553,7 @@ if (factsSection) {
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="2000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="2100"><img src="images/clients/client11.jpeg" alt="RYZON Green"><!-- Check that this file exists and is a valid .jpeg --></div>
         </div>
       </div>
   </div>
@@ -594,7 +666,7 @@ if (factsSection) {
           <div class="testimonial-author">
             <!-- <img src="images/client2.jpg" alt="Client" class="rounded-circle"> -->
             <div>
-              <h5>Mr. Abdul Sattar</h5>
+              <h5>Mr. mahesh jadhav</h5>
               <p class="text-muted">Ahmedabad</p>
             </div>
           </div>

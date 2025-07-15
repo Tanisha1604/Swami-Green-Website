@@ -11,70 +11,64 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=1.1">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body, .navbar, .btn, .form-control, .section-title, .brand-title, .brand-subtitle, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea {
+      font-family: 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif !important;
+      letter-spacing: 0.01em;
+    }
+    h1, h2, h3, .section-title, .brand-title {
+      font-weight: 700 !important;
+      letter-spacing: 0.01em;
+    }
+    .brand-title {
+      font-weight: 800 !important;
+    }
+    .brand-subtitle {
+      font-weight: 500 !important;
+    }
+  </style>
 </head>
 <body>
 
 <!-- Enhanced Professional Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-lg" style="backdrop-filter: blur(10px); background: rgba(255,255,255,0.95) !important;" data-aos="fade-down" data-aos-delay="50">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo.png" alt="Swami Renewable Logo" height="45" class="d-inline-block align-top me-3">
+<nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
+      <img src="images/logo.png" alt="Swami Renewable Logo" height="48" class="d-inline-block align-top" style="border-radius:12px;box-shadow:0 2px 8px #43e97b22;">
       <div>
-        <span class="fw-bold text-success fs-4">Swami Renewable</span>
-        <div class="small text-muted">Solar Energy Solutions</div>
+        <div class="brand-title">Swami Renewable</div>
+        <div class="brand-subtitle">Solar Energy Solutions</div>
       </div>
     </a>
-    
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html">
-            <i class="fas fa-home me-1"></i>Home
-          </a>
+          <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="about.html">
-            <i class="fas fa-info-circle me-1"></i>About
-          </a>
+          <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium active" href="services.html">
-            <i class="fas fa-cogs me-1"></i>Services
-          </a>
+          <a class="nav-link" href="services.html"><i class="fas fa-cogs me-1"></i>Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="projects.html">
-            <i class="fas fa-project-diagram me-1"></i>Projects
-          </a>
+          <a class="nav-link" href="projects.html"><i class="fas fa-project-diagram me-1"></i>Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="calculator.html">
-            <i class="fas fa-calculator me-1"></i>Calculator
-          </a>
+          <a class="nav-link" href="calculator.html"><i class="fas fa-calculator me-1"></i>Calculator</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="career.html">
-            <i class="fas fa-briefcase me-1"></i>Career
-          </a>
+          <a class="nav-link" href="career.html"><i class="fas fa-briefcase me-1"></i>Career</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html#testimonials">
-            <i class="fas fa-star me-1"></i>Testimonials
-          </a>
+          <a class="nav-link" href="index.html#testimonials"><i class="fas fa-star me-1"></i>Testimonials</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium" href="index.html#contact">
-            <i class="fas fa-envelope me-1"></i>Contact
-          </a>
-        </li>
-        <li class="nav-item ms-3">
-          <a class="btn btn-success px-4 py-2 rounded-pill fw-medium" href="index.html#contact">
-            <i class="fas fa-phone me-1"></i>Get Quote
-          </a>
+          <a class="nav-link" href="index.html#contact"><i class="fas fa-envelope me-1"></i>Contact</a>
         </li>
       </ul>
     </div>
