@@ -236,18 +236,29 @@
 
 <!-- Hero Section -->
 
-
-<header class="hero">
-  <div class="container h-100">
+<header class="hero position-relative" style="min-height: 520px; background: url('images/solar-bg.jpg') center/cover no-repeat; overflow: hidden;">
+  <!-- Video background -->
+  <video autoplay loop muted playsinline poster="images/solar-bg.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+    <source src="images/hero-bg.mp4" type="video/mp4">
+    <!-- Fallback image if video not supported -->
+  </video>
+  <!-- Subtle dark overlay for professionalism and readability -->
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(24, 28, 36, 0.48);z-index:1;"></div>
+  <div class="container h-100 position-relative z-2" style="position:relative;z-index:2;">
     <div class="row h-100 align-items-center">
       <div class="col-lg-8">
-        <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-down" data-aos-delay="100">Powering a Sustainable Future</h1>
-        <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="200">Innovative solar energy solutions for commercial and industrial applications across India</p>
+        <div class="mb-3" data-aos="fade-down" data-aos-delay="50">
+          <span class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-75 rounded-circle shadow" style="width:56px;height:56px;">
+            <i class="fas fa-sun text-warning" style="font-size:1.7rem;"></i>
+          </span>
+        </div>
+        <h1 class="display-2 fw-bold text-white mb-4" data-aos="fade-down" data-aos-delay="100" style="text-shadow:0 4px 24px #181c24cc;letter-spacing:0.01em;">Powering a Sustainable Future</h1>
+        <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="200" style="font-size:1.25rem;max-width:600px;text-shadow:0 2px 8px #181c2499;">Premium solar energy solutions for commercial and industrial clients across India. Partner with us for reliability, innovation, and a greener tomorrow.</p>
         <div class="d-flex flex-wrap gap-3 hero-btn-group mt-4" data-aos="zoom-in" data-aos-delay="350">
-          <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2">
+          <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2" style="font-weight:600;border-width:2px;">
             <i class="fas fa-cogs"></i> Our Services
           </a>
-          <a href="calculator.html" class="btn btn-success btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2">
+          <a href="calculator.html" class="btn btn-success btn-lg px-5 py-3 hero-btn shadow rounded-pill d-flex align-items-center gap-2" style="font-weight:600;">
             <i class="fas fa-calculator"></i> Calculator
           </a>
         </div>
@@ -541,19 +552,7 @@ if (factsSection) {
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
           <div class="client-logo" data-aos="zoom-in" data-aos-delay="1000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client11.jpeg" alt="RYZON Green"><!-- Check that this file exists and is a valid .jpeg --></div>
-          <!-- Duplicate for seamless loop -->
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client1.jpeg" alt="MEGHA ENGINEERING"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1200"><img src="images/clients/client2.jpeg" alt="RAVINDRA ENERGY"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1300"><img src="images/clients/client3.jpeg" alt="SHRIPAD ENERGY"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1400"><img src="images/clients/client4.jpeg" alt="SUZLON"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1500"><img src="images/clients/client5.jpeg" alt="MARCONI SOLAR"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1600"><img src="images/clients/client6.jpeg" alt="T&D INFRA ENERGY"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1700"><img src="images/clients/client7.jpeg" alt="SAI LEGACY"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1800"><img src="images/clients/client8.jpeg" alt="MK SONS"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1900"><img src="images/clients/client9.jpeg" alt="SORIGIN"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="2000"><img src="images/clients/client10.jpeg" alt="ARNIMA"></div>
-          <div class="client-logo" data-aos="zoom-in" data-aos-delay="2100"><img src="images/clients/client11.jpeg" alt="RYZON Green"><!-- Check that this file exists and is a valid .jpeg --></div>
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="1100"><img src="images/clients/client11.jpeg" alt="RYZON Green"></div>
         </div>
       </div>
   </div>
@@ -647,7 +646,7 @@ if (factsSection) {
       <div class="col-md-4">
         <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
           <div class="testimonial-text">
-            <p>"I was very impressed with the professionalism and responsiveness of the Swami Energy team. They took care of all the processes and made it an easy process. "</p>
+            <p>"I was very impressed with the professionalism and responsiveness of the Swami Energy team. They took care of all the processes and made it easy process and making project on time."</p>
           </div>
           <div class="testimonial-author">
             <!-- <img src="images/client1.jpg" alt="Client" class="rounded-circle"> -->
