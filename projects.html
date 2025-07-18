@@ -26,6 +26,147 @@
     .brand-subtitle {
       font-weight: 500 !important;
     }
+    #projects {
+      background: linear-gradient(135deg, #f4f7f6 0%, #e6f4ea 100%);
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-size: 2.3rem;
+      color: #198754;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #28a745 0%, #43e97b 100%);
+      border-radius: 2px;
+      margin: 0.5rem auto 0 auto;
+      animation: underlineGrow 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes underlineGrow {
+      from { width: 0; opacity: 0.2; }
+      to { width: 60px; opacity: 1; }
+    }
+    .section-subtitle {
+      font-size: 1.18rem;
+      color: #155d27;
+      opacity: 0.85;
+      margin-bottom: 2.5rem;
+    }
+    .projects-alt-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .project-alt-row {
+      display: flex;
+      align-items: stretch;
+      min-height: 180px;
+      height: 220px;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(40,167,69,0.10);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .project-alt-row.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-alt-row.even {
+      flex-direction: row-reverse;
+    }
+    .project-alt-img, .project-alt-info {
+      flex: 1 1 50%;
+      min-width: 0;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      height: 100%;
+    }
+    .project-alt-img {
+      background: #e6f4ea;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-alt-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .project-alt-row:hover .project-alt-img img {
+      transform: scale(1.045);
+    }
+    .project-alt-info {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.5rem 1.1rem 1.1rem 1.1rem;
+      background: #fff;
+    }
+    .project-alt-title {
+      color: #198754;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+    .project-alt-desc {
+      font-size: 1.01rem;
+      color: #333;
+      margin-bottom: 1.1rem;
+    }
+    .project-alt-list {
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-alt-list li {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .project-alt-list .fa-check-circle {
+      color: #28a745;
+    }
+    @media (max-width: 991.98px) {
+      .project-alt-row, .project-alt-row.even {
+        flex-direction: column;
+        min-height: unset;
+        height: unset;
+      }
+      .project-alt-img, .project-alt-info {
+        height: auto;
+        min-height: unset;
+      }
+      .project-alt-img img {
+        min-height: 120px;
+        max-height: 180px;
+      }
+      .project-alt-info {
+        padding: 1rem 0.7rem 0.7rem 0.7rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .project-alt-title {
+        font-size: 1.08rem;
+      }
+      .project-alt-info {
+        padding: 0.9rem 0.5rem 0.5rem 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -75,73 +216,64 @@
 </nav>
 
 <!-- Projects Section (Alternating Row Layout) -->
-<section id="projects" style="background:#f4f7f6; padding-top:4rem; padding-bottom:4rem;">
+<section id="projects">
   <div class="container">
     <h2 class="section-title text-center mb-4">Our Projects</h2>
     <p class="section-subtitle text-center mb-5">A showcase of our recent solar installations and achievements</p>
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/project1.jpg" alt="25 MW Gwalior" class="img-fluid rounded shadow-sm w-100" style="max-height:340px; object-fit:cover;">
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-          <h4 class="mb-2 text-success">25 MW Gwalior</h4>
-          <p class="mb-3">A major ground-mounted solar project delivering clean energy to the region. Our team managed EPC, commissioning, and asset management for this large-scale solar plant.</p>
-          <ul class="list-unstyled mb-3">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Commissioned and operational</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>High efficiency modules</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Smart monitoring & analytics</li>
+    <div class="projects-alt-list">
+      <div class="project-alt-row">
+        <div class="project-alt-img">
+          <img src="images/project2.jpg" alt="25 MW Gwalior">
+        </div>
+        <div class="project-alt-info">
+          <div class="project-alt-title">25 MW Gwalior</div>
+          <div class="project-alt-desc">A major ground-mounted solar project delivering clean energy to the region. Our team managed EPC, commissioning, and asset management for this large-scale solar plant.</div>
+          <ul class="project-alt-list list-unstyled mb-0">
+            <li><i class="fas fa-check-circle me-2"></i>Commissioned and operational</li>
+            <li><i class="fas fa-check-circle me-2"></i>High efficiency modules</li>
+            <li><i class="fas fa-check-circle me-2"></i>Smart monitoring & analytics</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="row align-items-center flex-md-row-reverse mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/project2.jpg" alt="6.5 MW Jalna" class="img-fluid rounded shadow-sm w-100" style="max-height:340px; object-fit:cover;">
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-          <h4 class="mb-2 text-success">6.5 MW Jalna</h4>
-          <p class="mb-3">A successful solar installation in Jalna, providing reliable green power and supporting local sustainability goals.</p>
-          <ul class="list-unstyled mb-3">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Turnkey EPC & O&M</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Custom grid integration</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>24/7 support</li>
+      <div class="project-alt-row even">
+        <div class="project-alt-img">
+          <img src="images/project1.jpg" alt="6.5 MW Jalna">
+        </div>
+        <div class="project-alt-info">
+          <div class="project-alt-title">6.5 MW Jalna</div>
+          <div class="project-alt-desc">A successful solar installation in Jalna, providing reliable green power and supporting local sustainability goals.</div>
+          <ul class="project-alt-list list-unstyled mb-0">
+            <li><i class="fas fa-check-circle me-2"></i>Turnkey EPC & O&M</li>
+            <li><i class="fas fa-check-circle me-2"></i>Custom grid integration</li>
+            <li><i class="fas fa-check-circle me-2"></i>24/7 support</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/project3.jpg" alt="45+ MW Jalgaon District" class="img-fluid rounded shadow-sm w-100" style="max-height:340px; object-fit:cover;">
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-          <h4 class="mb-2 text-success">45+ MW Jalgaon District</h4>
-          <p class="mb-3">Multiple solar projects across Jalgaon district, contributing significantly to the region's renewable energy capacity.</p>
-          <ul class="list-unstyled mb-3">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Distributed solar plants</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Community and industrial supply</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Ongoing maintenance</li>
+      <div class="project-alt-row">
+        <div class="project-alt-img">
+          <img src="images/project3.jpg" alt="45+ MW Jalgaon District">
+        </div>
+        <div class="project-alt-info">
+          <div class="project-alt-title">45+ MW Jalgaon District</div>
+          <div class="project-alt-desc">Multiple solar projects across Jalgaon district, contributing significantly to the region's renewable energy capacity.</div>
+          <ul class="project-alt-list list-unstyled mb-0">
+            <li><i class="fas fa-check-circle me-2"></i>Distributed solar plants</li>
+            <li><i class="fas fa-check-circle me-2"></i>Community and industrial supply</li>
+            <li><i class="fas fa-check-circle me-2"></i>Ongoing maintenance</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="row align-items-center flex-md-row-reverse mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <!-- BACKUP ORIGINAL 4TH PROJECT IMAGE:
-<img src="images/project1.jpg" alt="39 MW Nashik" class="img-fluid rounded shadow-sm w-100" style="max-height:340px; object-fit:cover;">
--->
-<img src="images/project4.jpg" alt="39 MW Nashik" class="img-fluid rounded shadow-sm w-100" style="max-height:340px; object-fit:cover;">
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-          <h4 class="mb-2 text-success">39 MW Nashik</h4>
-          <p class="mb-3">A large-scale solar project in Nashik, supporting the city's clean energy transition and reducing carbon emissions.</p>
-          <ul class="list-unstyled mb-3">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Advanced technology</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Robust grid connection</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Long-term asset management</li>
+      <div class="project-alt-row even">
+        <div class="project-alt-img">
+          <img src="images/project4.jpg" alt="39 MW Nashik">
+        </div>
+        <div class="project-alt-info">
+          <div class="project-alt-title">39 MW Nashik</div>
+          <div class="project-alt-desc">A large-scale solar project in Nashik, supporting the city's clean energy transition and reducing carbon emissions.</div>
+          <ul class="project-alt-list list-unstyled mb-0">
+            <li><i class="fas fa-check-circle me-2"></i>Advanced technology</li>
+            <li><i class="fas fa-check-circle me-2"></i>Robust grid connection</li>
+            <li><i class="fas fa-check-circle me-2"></i>Long-term asset management</li>
           </ul>
         </div>
       </div>
@@ -213,6 +345,32 @@ navLinks.forEach(link => {
     link.classList.remove('active');
   }
 });
+</script>
+<script>
+// Simple fade-in animation for timeline steps on scroll
+const steps = document.querySelectorAll('.timeline-step');
+const observer = new window.IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+steps.forEach(step => observer.observe(step));
+</script>
+<script>
+// Fade-in/slide animation for alternating project rows
+const altRows = document.querySelectorAll('.project-alt-row');
+const altObserver = new window.IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      altObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+altRows.forEach(row => altObserver.observe(row));
 </script>
 </body>
 </html> 
